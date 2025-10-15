@@ -25,6 +25,7 @@ def main(args=None):
     temperature_publisher.destroy_node()
     rclpy.shutdown()
 
+#
 
 if __name__ == '__main__':
     main()
