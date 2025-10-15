@@ -3,9 +3,14 @@ from setuptools import find_packages, setup
 package_name = 'temp_ros_pkg'
 
 setup(
-    name=package_name,
+    name='temp-ros-pkg',
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    #packages=find_packages(exclude=['test']), 
+    packages=[],
+    py_modules=[
+        'temperature_publisher', 
+        'temperature_subscriber',
+    ],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -24,8 +29,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'temperature_publisher = temp_ros_pkg.temperature_publisher:main',
-            'temperature_subscriber = temp_ros_pkg.temperature_subscriber:main',
+            'temperature_publisher = temperature_publisher:main',
+            'temperature_subscriber = temperature_subscriber:main',
         ],
     },
 )
