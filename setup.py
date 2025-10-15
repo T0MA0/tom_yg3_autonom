@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'temperature_publisher = sze_sw1_temperatures.temperature_publisher:main',
+            'temperature_subscriber = sze_sw1_temperatures.temperature_subscriber:main',
         ],
     },
 )

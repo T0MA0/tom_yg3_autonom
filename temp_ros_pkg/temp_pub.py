@@ -16,7 +16,7 @@ class TemperaturePublisher(Node):
         msg = Float64()
         msg.data = temperature
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Hőmérséklet: "{msg.data:.2f}"')
+        self.get_logger().info(f'Hőmérséklet: {msg.data:.2f}')
 
 def main(args=None):
     rclpy.init(args=args)
