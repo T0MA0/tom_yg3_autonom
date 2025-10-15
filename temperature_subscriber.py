@@ -15,7 +15,14 @@ class TemperatureSubscriber(Node):
 
     def listener_callback(self,msg):
         temperature = msg.data
-        self.get_logger().info(f'Kapot hőmérséklet: {temperature:.2f} °C.')
+        status = "Normal"
+
+        if temperature < self.normal_min:
+            status = "Hideg"
+        elif temperature > self.normal_max:
+            status = "Meleg"
+
+        self.get_logger().info(f'Kapot hőmérséklet: {temperature:.2f} °C., Status: {status}')
 
 
 def main(args=None):
