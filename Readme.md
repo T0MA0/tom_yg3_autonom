@@ -11,4 +11,29 @@ A csomag neve: `temp_ros_pkg` amely két node-ból áll a `temperature_publisher
 
 ## Package & Build
 
-...
+
+``` bash
+source install/local_setup.bash
+```
+</details>
+
+``` terminal 1
+ros2 run temp_ros_pkg temperature_publisher
+```
+
+``` terminal 2
+ros2 run temp_ros_pkg temperature_subscriber
+```
+
+## Graph
+
+```mermaid
+graph LR;
+
+publisher([ temperature_publisher ]):::red --> temperature;
+temperature[ /temperature<br/>std_msgs/Float64 ]:::light --> subscriber([ temperature_subscriber ]):::red;
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742 
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
