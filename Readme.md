@@ -37,3 +37,5 @@ classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742
 classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
 classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
 classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+```
+![Communication](docs/Ke%CC%81pernyo%CC%8Bfoto%CC%81%202025-10-17%20-%2010.26.21.png)
