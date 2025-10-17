@@ -11,9 +11,27 @@ A csomag neve: `temp_ros_pkg` amely két node-ból áll a `temperature_publisher
 
 ## Package & Build
 
+### Clone the packages
+``` r
+cd ~/ros2_ws/src
+```
+``` r
+git clone https://github.com/T0MA0/temp_ros_pkg
+```
+
+### Build ROS 2 packages
+``` r
+cd ~/ros2_ws
+```
+``` r
+colcon build --packages-select temp_ros_pkg --symlink-install
+```
+
+<details>
+<summary> Don't forget to source before ROS commands.</summary>
 
 ``` bash
-source install/local_setup.bash
+source ~/ros2_ws/install/setup.bash
 ```
 </details>
 
